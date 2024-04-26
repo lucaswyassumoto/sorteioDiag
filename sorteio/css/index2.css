@@ -1,0 +1,73 @@
+@font-face {
+    font-family: KanitNormal;
+    src: url(../fonts/Kanit/Kanit-Light.ttf);
+}
+
+@font-face {
+    font-family: KanitBold;
+    src: url(../fonts/Kanit/Kanit-Medium.ttf);
+}
+
+html, body {
+    background-image: linear-gradient(to right, rgb(184, 184, 255), rgb(255, 255, 208));
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+}
+
+div.box {
+    padding: 30px 50px;
+    background-color: rgb(255, 202, 255);
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+div #resultado {
+    text-align: center;
+    font-size: 20px;
+    font-family: KanitNormal, sans-serif;
+    margin-bottom: 10px;
+}
+
+div #resultado h2 {
+    font-family: KanitNormal, sans-serif;
+    font-size: 18px;
+    color: rgb(62, 22, 99);
+    text-align: center;
+}
+
+.botaozin {
+    width: 100px;
+    height: 40px;
+    background-color: blueviolet;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botaozin h1 {
+    font-family: KanitNormal, sans-serif;
+    font-size: 14px;
+    color: rgb(239, 221, 255);
+    text-align: center;
+}
+
+.botaozin:hover {
+    transition: 0.4s;
+    opacity: 100%;
+    background-color: rgb(155, 208, 255);
+}

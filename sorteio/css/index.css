@@ -1,0 +1,117 @@
+@font-face {
+    font-family: KanitNormal;
+    src: url(../fonts/Kanit/Kanit-Light.ttf);
+}
+
+@font-face {
+    font-family: KanitBold;
+    src: url(../fonts/Kanit/Kanit-Medium.ttf);
+}
+
+html, body {
+    background-image: linear-gradient(to right, rgb(184, 184, 255), rgb(255, 255, 208));
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+}
+
+div.box {
+    padding: 30px 50px;
+    background-color: rgb(255, 202, 255);
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+div.box h1 {
+    font-family: KanitNormal, sans-serif;
+    font-size: 18px;
+    color: rgb(62, 22, 99);
+    text-align: center;
+}
+
+div.box h2 {
+    font-family: KanitNormal, sans-serif;
+    font-size: 14px;
+    color: rgb(89, 29, 144);
+    text-align: center;
+}
+
+div #number {
+    text-align: center;
+    border: none;
+    width: 50px;
+    height: 30px;
+    margin-bottom: 20px;
+}
+
+div #number:hover {
+    transition: 0.5s;
+    opacity: 100%;
+    background-color: rgb(222, 252, 255);
+}
+
+.numbers {
+    width: 200px;
+    height: 40px;
+    display:flex;
+    justify-content: center;
+}
+
+div #number1 {
+    text-align: center;
+    border: none;
+    width: 50px;
+    height: 30px;
+    margin-right: 4px;
+}
+
+div #number1:hover {
+    transition: 0.5s;
+    opacity: 100%;
+    background-color: rgb(222, 252, 255);
+}
+
+div #number2 {
+    text-align: center;
+    border: none;
+    width: 50px;
+    height: 30px;
+    margin-left: 4px;
+}
+
+div #number2:hover {
+    transition: 0.5s;
+    opacity: 100%;
+    background-color: rgb(222, 252, 255);
+}
+
+div .botao {
+    border: none;
+    margin-top: 40px;
+    font-family: KanitBold, sans-serif;
+    font-size: 14px;
+    width: 100px;
+    height: 40px;
+    background-color: blueviolet;
+    color: white;
+    border-radius: 6px;
+}
+
+div .botao:hover {
+    transition: 0.5s;
+    opacity: 100%;
+    background-color: rgb(172, 110, 229);
+}

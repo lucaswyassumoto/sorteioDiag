@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css" type="text/css">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <title>Diagnosticare - Sorteio</title>
+</head>
+<body>
+
+    <picture>
+        <img src="../images/Logo Diagnosticare - Alt_2.png" alt="image/png" class="logo">
+    </picture>
+
+    <div class="box">
+
+        <h1>Sorteio de números</h1>
+
+        <h2>Quantos números deseja sortear?</h2>
+
+        <input type="number" name="number" id="number">
+
+        <h2>Agora escolha um intervalo de números:</h2>
+
+        <div class="numbers">
+            <input type="number" name="number1" id="number1">
+            <input type="number" name="number2" id="number2">
+        </div>
+
+        <button onclick="sortearNumeros()" class="botao">Sortear</button>
+
+    </div>
+    
+    
+    <script>
+        function sortearNumeros() {
+            var number = parseInt(document.getElementById('number').value);
+            var number1 = parseInt(document.getElementById('number1').value);
+            var number2 = parseInt(document.getElementById('number2').value);
+
+            if (isNaN(number) || isNaN(number1) || isNaN(number2)) {
+                alert("Por favor, insira valores válidos.");
+                return;
+            }
+
+            if (number1 >= number2) {
+                alert("O valor mínimo deve ser menor que o valor máximo.");
+                return;
+            }
+
+            var numerosSorteados = [];
+            while (numerosSorteados.length < number) {
+                var numero = Math.floor(Math.random() * (number2 - number1 + 1)) + number1;
+                if (!numerosSorteados.includes(numero)) {
+                    numerosSorteados.push(numero);
+                }
+            }
+
+            var url = "index2.html?numeros=" + numerosSorteados.join(",");
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>

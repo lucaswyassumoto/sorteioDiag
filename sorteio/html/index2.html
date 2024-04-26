@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index2.css" type="text/css">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <script href="../scripts/script.js"></script>
+    <title>Diagnosticare - Sorteados</title>
+</head>
+<body>
+    
+    <picture>
+        <img src="../images/Logo Diagnosticare - Alt_2.png" alt="image/png" class="logo">
+    </picture>
+
+    <div class="box">
+
+        <div id="resultado"></div>
+
+        <a href="index.html" style="text-decoration: none;">
+        <div class="botaozin">
+            <h1>Voltar</h1>
+        </div>
+        </a>
+
+    </div>
+
+    <script>
+        window.onload = function() {
+            var urlParams = new URLSearchParams(window.location.search);
+            var numerosSorteados = urlParams.get('numeros').split(",");
+            var resultadoDiv = document.getElementById('resultado');
+            resultadoDiv.innerHTML = "<h2>Números Sorteados:</h2>";
+            for (var i = 0; i < numerosSorteados.length; i++) {
+                resultadoDiv.innerHTML += numerosSorteados[i] + "<br>";
+            }
+        }
+    </script>
+</body>
+</html>
